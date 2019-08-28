@@ -1,11 +1,15 @@
 gitflow
 ========
 
-The `development` branch the default branch where most of the work will happen, and the master branch keeps track of production-ready code.
+The `development` branch is the default branch where most of the work will happen, and the master branch keeps track of production-ready code.
 
 ## Feature branches
 
-git-flow makes it easy to work on multiple features at the same time by using feature branches. To start one, use feature start with the name of your new feature.
+git-flow makes it easy to work on multiple features at the same time by using feature branches. To start one, use feature/ sufix with the name of your new feature.
+
+## Wip branches
+
+If you need to partition your development, you can create a Wip branch and point it to your feature branch. This process helps make Pull Requests smaller and ensures that all code that has been merged into the feature branch has been reviewed.
 
 ## Versioned releases
 
@@ -23,6 +27,11 @@ Because you keep your master branch always in sync with the code that’s on pro
       Done: feature/login – merge >> develop
   
   For feature branches, the `<base>` arg must be a commit on `development`.
+
+* To list/start/finish wip branches, use:
+
+      Start: feature/your-branch - create branch >> wip/your-partial-code
+      Done: wip/your-partial-code – merge >> feature/your-branch
 
 * To list/start/finish release branches, use:
 
